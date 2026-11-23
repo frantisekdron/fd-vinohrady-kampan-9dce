@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Resort Vinohrady · kampaň ke schválení</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1C160E;--olive:#62602F;--olive-l:#EAEACF;--paper:#FAF6EF;--sand:#EDE5D6;--muted:#6f6656;--line:#ddd3c1}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 Poppins,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:var(--olive)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;color:var(--paper);background:#1C160E url(img/hero.jpg) center/cover no-repeat}
+header.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,22,14,.25) 0%,rgba(28,22,14,.55) 40%,rgba(28,22,14,.92) 100%)}
+.hero .wrap{position:relative;padding-bottom:56px;width:100%}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;margin:0 0 14px}
+.hero h1{font-size:clamp(38px,6vw,76px);line-height:1.02;font-weight:600;margin:0 0 18px;letter-spacing:-.01em}
+.hero p.lead{max-width:640px;font-size:18px;font-weight:300;margin:0 0 26px}
+.hero .linka{display:block;width:48px;height:2px;background:var(--olive-l);margin-bottom:18px}
+nav.chips{display:flex;flex-wrap:wrap;gap:8px}
+nav.chips a{color:var(--paper);text-decoration:none;font-size:13px;border:1px solid rgba(250,246,239,.45);padding:6px 14px;border-radius:999px;backdrop-filter:blur(6px)}
+nav.chips a:hover{background:rgba(250,246,239,.14)}
+.stazeni{background:var(--ink);color:var(--paper)}
+.stazeni .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between;padding-top:26px;padding-bottom:26px}
+.stazeni h2{font-size:20px;margin:0;font-weight:600}
+.stazeni p{margin:2px 0 0;color:#cfc6b4;font-size:14px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--olive-l);color:var(--ink);text-decoration:none;font-weight:600;padding:12px 20px;border-radius:10px;font-size:15px}
+.btn:hover{background:#fff}
+section{padding:84px 0 20px}
+.sec-h{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;align-items:baseline;margin-bottom:30px}
+.sec-h .cislo{font-size:13px;font-weight:600;color:var(--olive);letter-spacing:.2em;grid-row:span 2;padding-top:10px;border-top:2px solid var(--olive)}
+.sec-h h2{font-size:clamp(26px,3.4vw,38px);line-height:1.15;margin:0;font-weight:600}
+.sec-h p{margin:0;color:var(--muted);max-width:760px}
+.muted{color:var(--muted)}
+figure{margin:0}
+.vid video{width:100%;background:#000;border-radius:12px}
+.vid figcaption{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;font-size:14px;padding:10px 2px 0}
+.vid figcaption span:first-child{font-weight:500}
+.dl{margin-left:auto;font-weight:600;font-size:13px;text-decoration:none;border-bottom:1px solid currentColor}
+.hlavni{display:grid;grid-template-columns:minmax(0,2.35fr) minmax(0,1fr);gap:28px;align-items:start}
+.hlavni .f9x16 video{aspect-ratio:9/16;object-fit:cover}
+.body{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 28px;margin:28px 0 0;padding:0;list-style:none}
+.body li{padding-left:22px;position:relative;font-size:15px}
+.body li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:2px;background:var(--olive)}
+.rek{border-top:1px solid var(--line);padding:30px 0 34px}
+.rek-h{display:flex;gap:18px;align-items:flex-start;margin-bottom:20px}
+.rek-h h3{margin:0 0 4px;font-size:22px;font-weight:600}
+.rek-h p{margin:0;color:var(--muted);max-width:760px;font-size:15px}
+.pis{flex:none;width:42px;height:42px;border-radius:50%;background:var(--olive);color:var(--paper);display:inline-grid;place-items:center;font-weight:600;font-size:18px}
+.rek-g{display:grid;grid-template-columns:minmax(0,16fr) minmax(0,5.2fr) minmax(0,9fr);gap:20px;align-items:start}
+.f9x16 video{aspect-ratio:9/16}.f1x1 video{aspect-ratio:1/1}.f16x9 video{aspect-ratio:16/9}
+.tag{display:inline-block;vertical-align:middle;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:4px 10px;border-radius:999px;margin-left:8px}
+.tag-b{background:#f3e2c4;color:#7a4a08}
+.ai-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px}
+.ai-v{position:relative;border-radius:12px;overflow:hidden;background:#000;aspect-ratio:16/9}
+.ai-v video{width:100%;height:100%;object-fit:cover}
+.stitek{position:absolute;left:12px;top:10px;font-size:10px;letter-spacing:.18em;font-weight:500;color:var(--paper);border-bottom:1.5px solid var(--paper);padding-bottom:2px;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.ai figcaption{font-size:14px;font-weight:500;padding-top:9px;display:flex;flex-direction:column}
+.ai figcaption .muted{font-weight:400;font-size:13px}
+.foto-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.48fr);gap:18px;align-items:start}
+.foto-g a{display:block;border-radius:12px;overflow:hidden}
+.foto-g figcaption,.okoli figcaption{font-size:14px;color:var(--muted);padding-top:8px}
+.pozn{font-size:13px;color:var(--muted);margin-top:14px}
+.okoli{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:24px;align-items:start}
+.okoli a{display:block;border-radius:12px;overflow:hidden}
+.mapa{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:24px;align-items:center;margin-top:34px}
+.mapa video{border-radius:12px;width:100%;background:#000}
+.casy{list-style:none;margin:0;padding:0}
+.casy li{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:11px 2px;font-size:16px}
+.casy li b{font-weight:600;color:var(--olive)}
+.ban{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px;align-items:start;padding:22px 0;border-top:1px solid var(--line)}
+.ban-hl img{border-radius:8px;box-shadow:0 1px 0 var(--line)}
+.ban-t h4{margin:0 0 4px;font-size:18px}
+.ban-t p{margin:0 0 10px;color:var(--muted);font-size:14px}
+details summary{cursor:pointer;font-weight:500;font-size:14px;color:var(--olive)}
+.ban-r{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-top:12px}
+.ban-r a{display:flex;flex-direction:column;gap:3px;text-decoration:none;font-size:11px;color:var(--muted)}
+.ban-r img{max-height:150px;width:auto;border:1px solid var(--line);border-radius:4px}
+.txt{border-top:1px solid var(--line);padding:16px 0}
+.txt summary{display:flex;gap:14px;align-items:center;font-size:18px;color:var(--ink);font-weight:600;list-style:none}
+.txt summary::-webkit-details-marker{display:none}
+.txt summary::after{content:"+";margin-left:auto;font-weight:300;font-size:26px;color:var(--olive)}
+.txt[open] summary::after{content:"−"}
+.txt .pis{width:34px;height:34px;font-size:15px}
+.txt h4{margin:26px 0 8px;font-size:15px}
+.txt p{font-size:14px;margin:6px 0}
+.txt ul{font-size:14px;padding-left:20px}
+.txt code{font-size:12.5px;background:var(--sand);padding:1px 5px;border-radius:4px}
+.pozor{background:#f3e2c4;color:#5b3806;padding:10px 14px;border-radius:8px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.jak{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:4px 0 40px}
+.jak div{background:var(--sand);border-radius:12px;padding:20px 22px}
+.jak h4{margin:0 0 6px;font-size:16px}
+.jak p{margin:0;font-size:14px;color:#4a4235}
+.potreba{background:var(--ink);color:var(--paper);border-radius:18px;padding:40px clamp(22px,4vw,48px);margin-top:10px}
+.potreba h2{margin:0 0 6px;font-size:clamp(24px,3vw,34px);font-weight:600}
+.potreba>p{color:#cfc6b4;margin:0 0 22px}
+.potreba ol{margin:0;padding:0;list-style:none;counter-reset:p;display:grid;gap:14px}
+.potreba li{counter-increment:p;display:grid;grid-template-columns:38px 1fr;gap:14px;align-items:start}
+.potreba li::before{content:counter(p);width:30px;height:30px;border-radius:50%;background:var(--olive-l);color:var(--ink);display:grid;place-items:center;font-weight:600;font-size:14px}
+.potreba li b{display:block;font-weight:600}
+.potreba li span{color:#cfc6b4;font-size:14px}
+footer{padding:60px 0 70px;color:var(--muted);font-size:13px}
+#lb{position:fixed;inset:0;background:rgba(20,16,10,.94);display:none;align-items:center;justify-content:center;z-index:9;padding:24px;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-height:92vh;max-width:96vw;width:auto;border-radius:6px}
+@media (max-width:860px){
+ .hlavni,.okoli,.mapa,.ban,.foto-g{grid-template-columns:1fr}
+ .hlavni .f9x16{max-width:360px}
+ .rek-g{grid-template-columns:1fr 1fr}
+ .rek-g .f16x9{grid-column:1/-1}
+ section{padding-top:60px}
+ header.hero{min-height:70vh}
+ .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<p class="eyebrow">Resort Vinohrady · Hlohovec · ke schválení</p>
+<span class="linka"></span>
+<h1>Kampaň na předprodej<br>Resortu Vinohrady</h1>
+<p class="lead">Dobrý den, tady je všechno, co jsme pro neveřejný předprodej připravili: hlavní video s komentářem, verze na výšku,
+tři reklamní videa ve třech formátech, rozhýbané vizualizace, vyznačení pozemku, mapy okolí a podklady pro Google Ads.
+Prosíme o schválení nebo připomínky.</p>
+<nav class="chips"><a href="#video">Video</a><a href="#reklamy">Reklamní videa</a><a href="#vizualizace">Vizualizace</a>
+<a href="#pozemek">Pozemek</a><a href="#okoli">Okolí</a><a href="#google-ads">Google Ads</a><a href="#potrebujeme">Co potřebujeme</a></nav>
+</div></header>
+
+<div class="stazeni"><div class="wrap">
+<div><h2>Ke stažení</h2><p>Grafika v plném rozlišení: pozemek, body zájmu, 3D mapa okolí, bannery ve 11 rozměrech a logo. Videa se stahují pod každým přehrávačem.</p></div>
+<a class="btn" href="stazeni/Resort_Vinohrady_grafika.zip" download>Stáhnout grafiku (ZIP, 63 MB)</a>
+</div></div>
+
+<main class="wrap">
+<section id="video">
+<div class="sec-h"><span class="cislo">01</span><h2>Hlavní video s komentářem</h2>
+<p>Na Sreality, web a YouTube. Jižní Morava, resort dnes a po proměně, apartmány, okolí, jak získat apartmán, crowdfunding a výzva k přednostnímu přístupu. Vedle verze na výšku pro Instagram, Facebook a TikTok.</p></div>
+<div class="hlavni">
+<figure class="vid f16x9"><video controls preload="none" playsinline poster="img/RV_Sreality_16x9.jpg" src="video/RV_Sreality_16x9.mp4"></video><figcaption><span>Na šířku 16:9</span><span class="muted">1:57</span><a class="dl" href="video/RV_Sreality_16x9.mp4" download>Stáhnout MP4</a></figcaption></figure>
+<figure class="vid f9x16"><video controls preload="none" playsinline poster="img/RV_vyska_9x16.jpg" src="video/RV_vyska_9x16.mp4"></video><figcaption><span>Na výšku 9:16</span><span class="muted">1:57</span><a class="dl" href="video/RV_vyska_9x16.mp4" download>Stáhnout MP4</a></figcaption></figure>
+</div>
+<ul class="body">
+<li>Vizualizace mají štítek VIZUALIZACE, dnešní penzion štítek SKUTEČNÝ STAV.</li>
+<li>Výnos z pronájmu se negarantuje. Ve videu zazní jen „70 % čistých tržeb připadá majitelům“.</li>
+<li>Titulky toho, co zaznívá v komentáři, takže video funguje i bez zvuku.</li>
+<li>Komentář namluvený hlasem, hudba pod hlasem, zvuk srovnaný na −14 LUFS.</li>
+</ul>
+</section>
+
+<section id="reklamy">
+<div class="sec-h"><span class="cislo">02</span><h2>Reklamní videa A · B · C</h2>
+<p>Tři sdělení, každé na šířku, na výšku a čtverec. Krátké střihy z hlavního videa a výzva k přednostnímu přístupu na resortvinohrady.cz.
+V reklamách A a C nepadají slova „investice“ ani „výnos“, aby prošly pravidly Mety i Googlu.</p></div>
+<div class="rek" id="reklama-A"><div class="rek-h"><span class="pis">A</span><div><h3>Vlastnit · Užívat · Vydělávat </h3><p>Pro kupce celého apartmánu: užívat kdykoli, jinak pronájem přes Rentia Places a 70 % čistých tržeb majitelům.</p></div></div><div class="rek-g"><figure class="vid f16x9"><video controls preload="none" playsinline poster="img/reklama_A_16x9.jpg" src="video/reklama_A_16x9.mp4"></video><figcaption><span>16:9 · YouTube, obsahová síť</span><span class="muted">32 s</span><a class="dl" href="video/reklama_A_16x9.mp4" download>Stáhnout MP4</a></figcaption></figure><figure class="vid f9x16"><video controls preload="none" playsinline poster="img/reklama_A_9x16.jpg" src="video/reklama_A_9x16.mp4"></video><figcaption><span>9:16 · YouTube Shorts, Discover</span><span class="muted">32 s</span><a class="dl" href="video/reklama_A_9x16.mp4" download>Stáhnout MP4</a></figcaption></figure><figure class="vid f1x1"><video controls preload="none" playsinline poster="img/reklama_A_1x1.jpg" src="video/reklama_A_1x1.mp4"></video><figcaption><span>1:1 · Gmail, Discover, obsahová síť</span><span class="muted">32 s</span><a class="dl" href="video/reklama_A_1x1.mp4" download>Stáhnout MP4</a></figcaption></figure></div></div><div class="rek" id="reklama-B"><div class="rek-h"><span class="pis">B</span><div><h3>Od 500 000 Kč <span class="tag tag-b">Ke schválení Rentia / myRENTIA</span></h3><p>Crowdfunding myRENTIA pro ty, kdo nemají na celý apartmán. Texty a podmínky musí před spuštěním schválit Rentia / myRENTIA.</p></div></div><div class="rek-g"><figure class="vid f16x9"><video controls preload="none" playsinline poster="img/reklama_B_16x9.jpg" src="video/reklama_B_16x9.mp4"></video><figcaption><span>16:9 · YouTube, obsahová síť</span><span class="muted">22 s</span><a class="dl" href="video/reklama_B_16x9.mp4" download>Stáhnout MP4</a></figcaption></figure><figure class="vid f9x16"><video controls preload="none" playsinline poster="img/reklama_B_9x16.jpg" src="video/reklama_B_9x16.mp4"></video><figcaption><span>9:16 · YouTube Shorts, Discover</span><span class="muted">22 s</span><a class="dl" href="video/reklama_B_9x16.mp4" download>Stáhnout MP4</a></figcaption></figure><figure class="vid f1x1"><video controls preload="none" playsinline poster="img/reklama_B_1x1.jpg" src="video/reklama_B_1x1.mp4"></video><figcaption><span>1:1 · Gmail, Discover, obsahová síť</span><span class="muted">22 s</span><a class="dl" href="video/reklama_B_1x1.mp4" download>Stáhnout MP4</a></figcaption></figure></div></div><div class="rek" id="reklama-C"><div class="rek-h"><span class="pis">C</span><div><h3>Místo, které má všechno </h3><p>Lokalita a služby: Valtice i Lednice 6 minut, bazén, wellness, vinárna. Pro nejširší publikum.</p></div></div><div class="rek-g"><figure class="vid f16x9"><video controls preload="none" playsinline poster="img/reklama_C_16x9.jpg" src="video/reklama_C_16x9.mp4"></video><figcaption><span>16:9 · YouTube, obsahová síť</span><span class="muted">28 s</span><a class="dl" href="video/reklama_C_16x9.mp4" download>Stáhnout MP4</a></figcaption></figure><figure class="vid f9x16"><video controls preload="none" playsinline poster="img/reklama_C_9x16.jpg" src="video/reklama_C_9x16.mp4"></video><figcaption><span>9:16 · YouTube Shorts, Discover</span><span class="muted">28 s</span><a class="dl" href="video/reklama_C_9x16.mp4" download>Stáhnout MP4</a></figcaption></figure><figure class="vid f1x1"><video controls preload="none" playsinline poster="img/reklama_C_1x1.jpg" src="video/reklama_C_1x1.mp4"></video><figcaption><span>1:1 · Gmail, Discover, obsahová síť</span><span class="muted">28 s</span><a class="dl" href="video/reklama_C_1x1.mp4" download>Stáhnout MP4</a></figcaption></figure></div></div>
+</section>
+
+<section id="vizualizace">
+<div class="sec-h"><span class="cislo">03</span><h2>Rozhýbané vizualizace</h2>
+<p>Vizualizace z webu jsme rozpohybovali (Kling a Seedance), aby video nestálo na statických obrázcích. Vždy jsou označené štítkem VIZUALIZACE.</p></div>
+<div class="ai-g"><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_K01.jpg" data-src="video/ai/K01.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Fasáda<span class="muted">pomalý nájezd, světla se rozsvítí, tráva se vlní</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_K02.jpg" data-src="video/ai/K02.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Bazén<span class="muted">boční jízda, vlnky a odlesky na trámech</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_K03.jpg" data-src="video/ai/K03.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Sauna<span class="muted">pomalý nájezd, pára, teplé světlo</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_K04.jpg" data-src="video/ai/K04.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Restaurace<span class="muted">jízda vpřed mezi stoly, slunce z oken</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_K05.jpg" data-src="video/ai/K05.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Vinárna<span class="muted">jízda k baru, závěsná světla</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_S2.jpg" data-src="video/ai/S2.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Degustace ve vinárně<span class="muted">Vinař nalévá víno čtyřem hostům u dlouhého stolu</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_K06.jpg" data-src="video/ai/K06.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Obývák<span class="muted">sluneční pruhy, nájezd k oknu s vinicí</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_K07.jpg" data-src="video/ai/K07.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Ložnice<span class="muted">oblouk kolem postele, záclony v průvanu</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_P6.jpg" data-src="video/ai/P6.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Průchod<span class="muted">z předsíně dveřmi až do ložnice</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_K08.jpg" data-src="video/ai/K08.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Koupelna<span class="muted">pomalý nájezd, světlo přes sklo</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_S3.jpg" data-src="video/ai/S3.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Ráno v apartmánu<span class="muted">Žena s kávou dojde k oknu, protisvětlo, silueta</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_K09.jpg" data-src="video/ai/K09.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Zahrada<span class="muted">vítr v trávě, houpačka se lehce zhoupne</span></figcaption></figure><figure class="ai"><div class="ai-v"><video muted loop playsinline preload="none" poster="img/ai_S1.jpg" data-src="video/ai/S1.mp4"></video><span class="stitek">VIZUALIZACE</span></div><figcaption>Elektrokola ve vinici<span class="muted">Pár na elektrokolech ve vinici, kamera couvá před nimi</span></figcaption></figure></div>
+</section>
+
+<section id="pozemek">
+<div class="sec-h"><span class="cislo">04</span><h2>Vyznačení pozemku</h2>
+<p>Obrys podle oplocení a katastru na našich fotkách z dronu, okolí v černobílé, aby areál vynikl.</p></div>
+<div class="foto-g">
+<figure><a href="img/pozemek_0601_16x9.jpg" class="lb"><img loading="lazy" src="img/pozemek_0601_16x9.jpg" alt="Areál shora s vyznačeným pozemkem"></a><figcaption>Areál shora s vyznačeným pozemkem</figcaption></figure><figure><a href="img/pozemek_0529_16x9.jpg" class="lb"><img loading="lazy" src="img/pozemek_0529_16x9.jpg" alt="Pohled od vinic"></a><figcaption>Pohled od vinic</figcaption></figure><figure><a href="img/pozemek_0524_9x16.jpg" class="lb"><img loading="lazy" src="img/pozemek_0524_9x16.jpg" alt="Na výšku pro stories a reels"></a><figcaption>Na výšku pro stories a reels</figcaption></figure>
+</div>
+<p class="pozn">Hranice jsou orientační, podle katastru nemovitostí a oplocení. Podklad © ČÚZK.</p>
+</section>
+
+<section id="okoli">
+<div class="sec-h"><span class="cislo">05</span><h2>Okolí a dojezdy</h2>
+<p>Fotka z dronu s body zájmu a 3D mapa okolí, kterou používáme ve videích. Časy jsou autem z resortu, stejně jako na webu.</p></div>
+<div class="okoli">
+<figure><a href="img/poi_16x9.jpg" class="lb"><img loading="lazy" src="img/poi_16x9.jpg" alt="Body zájmu Na šířku"></a><figcaption>Body zájmu · Na šířku</figcaption></figure><figure><a href="img/poi_9x16.jpg" class="lb"><img loading="lazy" src="img/poi_9x16.jpg" alt="Body zájmu Na výšku"></a><figcaption>Body zájmu · Na výšku</figcaption></figure>
+</div>
+<div class="mapa">
+<video controls muted playsinline preload="none" poster="img/mapa_okoli_16x9.jpg" src="video/mapa_okoli_16x9.mp4"></video>
+<div><h3 style="margin:0 0 10px;font-size:20px">3D mapa okolí</h3>
+<ul class="casy"><li><span>Valtice</span><b>6 min</b></li><li><span>Lednice</span><b>6 min</b></li><li><span>Mikulov</span><b>18 min</b></li><li><span>Brno</span><b>51 min</b></li><li><span>Vídeň</span><b>cca 1 h</b></li><li><span>Bratislava</span><b>cca 1 h</b></li></ul></div>
+</div>
+</section>
+
+<section id="google-ads">
+<div class="sec-h"><span class="cislo">06</span><h2>Google Ads</h2>
+<p>Kampaně připravíme ve vašem účtu Google Ads. Všechno založíme jako pozastavené a spustíme až po vašem souhlasu.</p></div>
+<div class="jak">
+<div><h4>Vyhledávání</h4><p>Lidé, kteří apartmán na jižní Moravě aktivně hledají. Sdělení A a C, k tomu kampaň na značku.</p></div>
+<div><h4>Demand Gen</h4><p>YouTube, Discover a Gmail s bannery a reklamními videy. Stejné publikum pro A i C, abychom férově porovnali, které sdělení funguje líp.</p></div>
+<div><h4>Varianta B až po schválení</h4><p>Crowdfunding myRENTIA spustíme až po písemném schválení textů a ověření pro finanční služby v Google Ads.</p></div>
+<div><h4>Měření</h4><p>Lead = žádost o přednostní přístup (e-mail s kódem). Před spuštěním ověříme měření na webu zkušebním leadem.</p></div>
+</div>
+<h3 style="font-size:22px;margin:0 0 4px">Bannery</h3>
+<p class="muted" style="margin:0 0 6px">Šest motivů, každý v 11 rozměrech. Klikněte pro zvětšení, všechny rozměry jsou i v ZIPu nahoře.</p>
+<div class="ban"><a href="img/bannery/A1_1200x628.jpg" class="lb ban-hl"><img loading="lazy" src="img/bannery/A1_1200x628.jpg" alt="A1"></a><div class="ban-t"><h4>A1</h4><p>Fasáda za soumraku (vizualizace), světlý panel</p><details><summary>Dalších 10 rozměrů</summary><div class="ban-r"><a href="img/bannery/A1_1200x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/A1_1200x1200.jpg" alt="A1 1200x1200"><span>1200×1200</span></a><a href="img/bannery/A1_960x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/A1_960x1200.jpg" alt="A1 960x1200"><span>960×1200</span></a><a href="img/bannery/A1_300x600.jpg" class="lb"><img loading="lazy" src="img/bannery/A1_300x600.jpg" alt="A1 300x600"><span>300×600</span></a><a href="img/bannery/A1_160x600.jpg" class="lb"><img loading="lazy" src="img/bannery/A1_160x600.jpg" alt="A1 160x600"><span>160×600</span></a><a href="img/bannery/A1_970x250.jpg" class="lb"><img loading="lazy" src="img/bannery/A1_970x250.jpg" alt="A1 970x250"><span>970×250</span></a><a href="img/bannery/A1_728x90.jpg" class="lb"><img loading="lazy" src="img/bannery/A1_728x90.jpg" alt="A1 728x90"><span>728×90</span></a><a href="img/bannery/A1_336x280.jpg" class="lb"><img loading="lazy" src="img/bannery/A1_336x280.jpg" alt="A1 336x280"><span>336×280</span></a><a href="img/bannery/A1_300x250.jpg" class="lb"><img loading="lazy" src="img/bannery/A1_300x250.jpg" alt="A1 300x250"><span>300×250</span></a><a href="img/bannery/A1_320x100.jpg" class="lb"><img loading="lazy" src="img/bannery/A1_320x100.jpg" alt="A1 320x100"><span>320×100</span></a><a href="img/bannery/A1_320x50.jpg" class="lb"><img loading="lazy" src="img/bannery/A1_320x50.jpg" alt="A1 320x50"><span>320×50</span></a></div></details></div></div><div class="ban"><a href="img/bannery/A2_1200x628.jpg" class="lb ban-hl"><img loading="lazy" src="img/bannery/A2_1200x628.jpg" alt="A2"></a><div class="ban-t"><h4>A2</h4><p>Dron s obrysem pozemku, tmavý panel</p><details><summary>Dalších 10 rozměrů</summary><div class="ban-r"><a href="img/bannery/A2_1200x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/A2_1200x1200.jpg" alt="A2 1200x1200"><span>1200×1200</span></a><a href="img/bannery/A2_960x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/A2_960x1200.jpg" alt="A2 960x1200"><span>960×1200</span></a><a href="img/bannery/A2_300x600.jpg" class="lb"><img loading="lazy" src="img/bannery/A2_300x600.jpg" alt="A2 300x600"><span>300×600</span></a><a href="img/bannery/A2_160x600.jpg" class="lb"><img loading="lazy" src="img/bannery/A2_160x600.jpg" alt="A2 160x600"><span>160×600</span></a><a href="img/bannery/A2_970x250.jpg" class="lb"><img loading="lazy" src="img/bannery/A2_970x250.jpg" alt="A2 970x250"><span>970×250</span></a><a href="img/bannery/A2_728x90.jpg" class="lb"><img loading="lazy" src="img/bannery/A2_728x90.jpg" alt="A2 728x90"><span>728×90</span></a><a href="img/bannery/A2_336x280.jpg" class="lb"><img loading="lazy" src="img/bannery/A2_336x280.jpg" alt="A2 336x280"><span>336×280</span></a><a href="img/bannery/A2_300x250.jpg" class="lb"><img loading="lazy" src="img/bannery/A2_300x250.jpg" alt="A2 300x250"><span>300×250</span></a><a href="img/bannery/A2_320x100.jpg" class="lb"><img loading="lazy" src="img/bannery/A2_320x100.jpg" alt="A2 320x100"><span>320×100</span></a><a href="img/bannery/A2_320x50.jpg" class="lb"><img loading="lazy" src="img/bannery/A2_320x50.jpg" alt="A2 320x50"><span>320×50</span></a></div></details></div></div><div class="ban"><a href="img/bannery/B1_1200x628.jpg" class="lb ban-hl"><img loading="lazy" src="img/bannery/B1_1200x628.jpg" alt="B1"></a><div class="ban-t"><h4>B1 <span class="tag tag-b">ke schválení</span></h4><p>Noční dron (vizualizace), světlý panel</p><details><summary>Dalších 10 rozměrů</summary><div class="ban-r"><a href="img/bannery/B1_1200x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/B1_1200x1200.jpg" alt="B1 1200x1200"><span>1200×1200</span></a><a href="img/bannery/B1_960x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/B1_960x1200.jpg" alt="B1 960x1200"><span>960×1200</span></a><a href="img/bannery/B1_300x600.jpg" class="lb"><img loading="lazy" src="img/bannery/B1_300x600.jpg" alt="B1 300x600"><span>300×600</span></a><a href="img/bannery/B1_160x600.jpg" class="lb"><img loading="lazy" src="img/bannery/B1_160x600.jpg" alt="B1 160x600"><span>160×600</span></a><a href="img/bannery/B1_970x250.jpg" class="lb"><img loading="lazy" src="img/bannery/B1_970x250.jpg" alt="B1 970x250"><span>970×250</span></a><a href="img/bannery/B1_728x90.jpg" class="lb"><img loading="lazy" src="img/bannery/B1_728x90.jpg" alt="B1 728x90"><span>728×90</span></a><a href="img/bannery/B1_336x280.jpg" class="lb"><img loading="lazy" src="img/bannery/B1_336x280.jpg" alt="B1 336x280"><span>336×280</span></a><a href="img/bannery/B1_300x250.jpg" class="lb"><img loading="lazy" src="img/bannery/B1_300x250.jpg" alt="B1 300x250"><span>300×250</span></a><a href="img/bannery/B1_320x100.jpg" class="lb"><img loading="lazy" src="img/bannery/B1_320x100.jpg" alt="B1 320x100"><span>320×100</span></a><a href="img/bannery/B1_320x50.jpg" class="lb"><img loading="lazy" src="img/bannery/B1_320x50.jpg" alt="B1 320x50"><span>320×50</span></a></div></details></div></div><div class="ban"><a href="img/bannery/B2_1200x628.jpg" class="lb ban-hl"><img loading="lazy" src="img/bannery/B2_1200x628.jpg" alt="B2"></a><div class="ban-t"><h4>B2 <span class="tag tag-b">ke schválení</span></h4><p>Před a po: dnešní penzion a vizualizace, tmavý panel</p><details><summary>Dalších 10 rozměrů</summary><div class="ban-r"><a href="img/bannery/B2_1200x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/B2_1200x1200.jpg" alt="B2 1200x1200"><span>1200×1200</span></a><a href="img/bannery/B2_960x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/B2_960x1200.jpg" alt="B2 960x1200"><span>960×1200</span></a><a href="img/bannery/B2_300x600.jpg" class="lb"><img loading="lazy" src="img/bannery/B2_300x600.jpg" alt="B2 300x600"><span>300×600</span></a><a href="img/bannery/B2_160x600.jpg" class="lb"><img loading="lazy" src="img/bannery/B2_160x600.jpg" alt="B2 160x600"><span>160×600</span></a><a href="img/bannery/B2_970x250.jpg" class="lb"><img loading="lazy" src="img/bannery/B2_970x250.jpg" alt="B2 970x250"><span>970×250</span></a><a href="img/bannery/B2_728x90.jpg" class="lb"><img loading="lazy" src="img/bannery/B2_728x90.jpg" alt="B2 728x90"><span>728×90</span></a><a href="img/bannery/B2_336x280.jpg" class="lb"><img loading="lazy" src="img/bannery/B2_336x280.jpg" alt="B2 336x280"><span>336×280</span></a><a href="img/bannery/B2_300x250.jpg" class="lb"><img loading="lazy" src="img/bannery/B2_300x250.jpg" alt="B2 300x250"><span>300×250</span></a><a href="img/bannery/B2_320x100.jpg" class="lb"><img loading="lazy" src="img/bannery/B2_320x100.jpg" alt="B2 320x100"><span>320×100</span></a><a href="img/bannery/B2_320x50.jpg" class="lb"><img loading="lazy" src="img/bannery/B2_320x50.jpg" alt="B2 320x50"><span>320×50</span></a></div></details></div></div><div class="ban"><a href="img/bannery/C1_1200x628.jpg" class="lb ban-hl"><img loading="lazy" src="img/bannery/C1_1200x628.jpg" alt="C1"></a><div class="ban-t"><h4>C1</h4><p>Resort a obec z dronu, světlý panel</p><details><summary>Dalších 10 rozměrů</summary><div class="ban-r"><a href="img/bannery/C1_1200x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/C1_1200x1200.jpg" alt="C1 1200x1200"><span>1200×1200</span></a><a href="img/bannery/C1_960x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/C1_960x1200.jpg" alt="C1 960x1200"><span>960×1200</span></a><a href="img/bannery/C1_300x600.jpg" class="lb"><img loading="lazy" src="img/bannery/C1_300x600.jpg" alt="C1 300x600"><span>300×600</span></a><a href="img/bannery/C1_160x600.jpg" class="lb"><img loading="lazy" src="img/bannery/C1_160x600.jpg" alt="C1 160x600"><span>160×600</span></a><a href="img/bannery/C1_970x250.jpg" class="lb"><img loading="lazy" src="img/bannery/C1_970x250.jpg" alt="C1 970x250"><span>970×250</span></a><a href="img/bannery/C1_728x90.jpg" class="lb"><img loading="lazy" src="img/bannery/C1_728x90.jpg" alt="C1 728x90"><span>728×90</span></a><a href="img/bannery/C1_336x280.jpg" class="lb"><img loading="lazy" src="img/bannery/C1_336x280.jpg" alt="C1 336x280"><span>336×280</span></a><a href="img/bannery/C1_300x250.jpg" class="lb"><img loading="lazy" src="img/bannery/C1_300x250.jpg" alt="C1 300x250"><span>300×250</span></a><a href="img/bannery/C1_320x100.jpg" class="lb"><img loading="lazy" src="img/bannery/C1_320x100.jpg" alt="C1 320x100"><span>320×100</span></a><a href="img/bannery/C1_320x50.jpg" class="lb"><img loading="lazy" src="img/bannery/C1_320x50.jpg" alt="C1 320x50"><span>320×50</span></a></div></details></div></div><div class="ban"><a href="img/bannery/C2_1200x628.jpg" class="lb ban-hl"><img loading="lazy" src="img/bannery/C2_1200x628.jpg" alt="C2"></a><div class="ban-t"><h4>C2</h4><p>Vnitřní bazén (vizualizace), tmavý panel</p><details><summary>Dalších 10 rozměrů</summary><div class="ban-r"><a href="img/bannery/C2_1200x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/C2_1200x1200.jpg" alt="C2 1200x1200"><span>1200×1200</span></a><a href="img/bannery/C2_960x1200.jpg" class="lb"><img loading="lazy" src="img/bannery/C2_960x1200.jpg" alt="C2 960x1200"><span>960×1200</span></a><a href="img/bannery/C2_300x600.jpg" class="lb"><img loading="lazy" src="img/bannery/C2_300x600.jpg" alt="C2 300x600"><span>300×600</span></a><a href="img/bannery/C2_160x600.jpg" class="lb"><img loading="lazy" src="img/bannery/C2_160x600.jpg" alt="C2 160x600"><span>160×600</span></a><a href="img/bannery/C2_970x250.jpg" class="lb"><img loading="lazy" src="img/bannery/C2_970x250.jpg" alt="C2 970x250"><span>970×250</span></a><a href="img/bannery/C2_728x90.jpg" class="lb"><img loading="lazy" src="img/bannery/C2_728x90.jpg" alt="C2 728x90"><span>728×90</span></a><a href="img/bannery/C2_336x280.jpg" class="lb"><img loading="lazy" src="img/bannery/C2_336x280.jpg" alt="C2 336x280"><span>336×280</span></a><a href="img/bannery/C2_300x250.jpg" class="lb"><img loading="lazy" src="img/bannery/C2_300x250.jpg" alt="C2 300x250"><span>300×250</span></a><a href="img/bannery/C2_320x100.jpg" class="lb"><img loading="lazy" src="img/bannery/C2_320x100.jpg" alt="C2 320x100"><span>320×100</span></a><a href="img/bannery/C2_320x50.jpg" class="lb"><img loading="lazy" src="img/bannery/C2_320x50.jpg" alt="C2 320x50"><span>320×50</span></a></div></details></div></div>
+<h3 style="font-size:22px;margin:40px 0 4px">Texty reklam</h3>
+<p class="muted" style="margin:0 0 10px">Nadpisy a popisy pro Vyhledávání, Performance Max a Demand Gen, včetně návrhu klíčových slov.</p>
+<details class="txt"><summary><span class="pis">A</span>Vlastnit · Užívat · Vydělávat</summary><p>Pro: kupce celé jednotky (35–64, vlastní kapitál nebo hypotéka) · Zobrazovaná cesta: resortvinohrady.cz/apartmany/lednice-valtice</p>
+<h4>Responzivní reklama ve vyhledávání (RSA)</h4>
+<div class="tw"><table><thead><tr><th>#</th><th>Nadpis</th><th>Znaků</th><th>Připnout</th></tr></thead><tbody><tr><td>1</td><td>Apartmán u Lednice a Valtic</td><td>27/30</td><td>pozice 1</td></tr><tr><td>2</td><td>Resort Vinohrady Hlohovec</td><td>25/30</td><td>pozice 1</td></tr><tr><td>3</td><td>Vlastnit, užívat, vydělávat</td><td>27/30</td><td>pozice 2</td></tr><tr><td>4</td><td>16 apartmánů od 2,8 mil. Kč</td><td>27/30</td><td></td></tr><tr><td>5</td><td>Cena od 2,8 mil. Kč vč. DPH</td><td>27/30</td><td></td></tr><tr><td>6</td><td>Užívejte apartmán kdykoli</td><td>25/30</td><td></td></tr><tr><td>7</td><td>Pronájem řeší Rentia Places</td><td>27/30</td><td></td></tr><tr><td>8</td><td>70 % čistých tržeb majitelům</td><td>28/30</td><td></td></tr><tr><td>9</td><td>Apartmány vybavené na klíč</td><td>26/30</td><td></td></tr><tr><td>10</td><td>Bazén, wellness a vinárna</td><td>25/30</td><td></td></tr><tr><td>11</td><td>Valtice i Lednice 6 minut</td><td>25/30</td><td></td></tr><tr><td>12</td><td>Neveřejný předprodej</td><td>20/30</td><td></td></tr><tr><td>13</td><td>Získejte přednostní přístup</td><td>27/30</td><td></td></tr><tr><td>14</td><td>Přístupový kód e-mailem</td><td>23/30</td><td></td></tr><tr><td>15</td><td>Předání a otevření Q4 2027</td><td>26/30</td><td></td></tr></tbody></table></div>
+<div class="tw"><table><thead><tr><th>#</th><th>Popis</th><th>Znaků</th></tr></thead><tbody><tr><td>1</td><td>16 apartmánů mezi Lednicí a Valticemi. Od 2,8 mil. Kč vč. DPH, vybavené na klíč.</td><td>80/90</td></tr><tr><td>2</td><td>Užívejte apartmán, kdy chcete. Když tam nejste, pronájem zajistí Rentia Places.</td><td>79/90</td></tr><tr><td>3</td><td>Z pronájmu jde majitelům 70 % čistých tržeb. Výnos z pronájmu se negarantuje.</td><td>77/90</td></tr><tr><td>4</td><td>Neveřejný předprodej. Získejte přednostní přístup, kód k nabídce pošleme e-mailem.</td><td>82/90</td></tr></tbody></table></div>
+<h4>Performance Max (skupina podkladů)</h4>
+<p><strong>Krátké nadpisy</strong> (max 30)</p>
+<ul>
+<li>Apartmán u Lednice a Valtic · 27/30</li>
+<li>Vlastnit, užívat, vydělávat · 27/30</li>
+<li>Od 2,8 mil. Kč vč. DPH · 22/30</li>
+<li>Užívejte apartmán kdykoli · 25/30</li>
+<li>Pronájem řeší Rentia Places · 27/30</li>
+<li>16 apartmánů · 12/30</li>
+</ul>
+<p><strong>Dlouhé nadpisy</strong> (max 90)</p>
+<ul>
+<li>Vlastní apartmán u Lednice a Valtic. Užívejte ho kdykoli, jinak ho pronajme Rentia Places · 89/90</li>
+<li>16 apartmánů v Resort Vinohrady od 2,8 mil. Kč vč. DPH, vybavené na klíč · 72/90</li>
+<li>Neveřejný předprodej apartmánů u Lednice a Valtic. Získejte přednostní přístup · 78/90</li>
+</ul>
+<p><strong>Popisy</strong> (max 90, první do 60)</p>
+<ul>
+<li>16 apartmánů u Lednice a Valtic od 2,8 mil. Kč vč. DPH. · 55/60</li>
+<li>Užívejte apartmán, kdy chcete. Když tam nejste, pronájem zajistí Rentia Places. · 79/90</li>
+<li>Z pronájmu jde majitelům 70 % čistých tržeb. Výnos z pronájmu se negarantuje. · 77/90</li>
+<li>Neveřejný předprodej. Získejte přednostní přístup, kód k nabídce pošleme e-mailem. · 82/90</li>
+</ul>
+<h4>Demand Gen (reklama s obrázkem / videem)</h4>
+<p><strong>Krátké nadpisy</strong> (max 40)</p>
+<ul>
+<li>Vlastní apartmán u Lednice a Valtic · 35/40</li>
+<li>Vlastnit, užívat, vydělávat · 27/40</li>
+<li>16 apartmánů od 2,8 mil. Kč vč. DPH · 35/40</li>
+<li>Když tam nejste, pronájem řeší správce · 38/40</li>
+<li>Neveřejný předprodej u Lednice · 30/40</li>
+</ul>
+<p><strong>Dlouhé nadpisy</strong> (max 90)</p>
+<ul>
+<li>Vlastní apartmán u Lednice a Valtic. Užívejte ho kdykoli, jinak ho pronajme Rentia Places · 89/90</li>
+<li>16 apartmánů v Resort Vinohrady od 2,8 mil. Kč vč. DPH, vybavené na klíč · 72/90</li>
+</ul>
+<p><strong>Popisy</strong> (max 90)</p>
+<ul>
+<li>16 apartmánů mezi Lednicí a Valticemi. Od 2,8 mil. Kč vč. DPH, vybavené na klíč. · 80/90</li>
+<li>Užívejte apartmán, kdy chcete. Když tam nejste, pronájem zajistí Rentia Places. · 79/90</li>
+<li>Z pronájmu jde majitelům 70 % čistých tržeb. Výnos z pronájmu se negarantuje. · 77/90</li>
+<li>Neveřejný předprodej. Získejte přednostní přístup, kód k nabídce pošleme e-mailem. · 82/90</li>
+</ul>
+<h4>Klíčová slova (návrh, ověřit objemy v Plánovači klíčových slov)</h4>
+<ul>
+<li><strong>A1 Apartmán na prodej:</strong> <code>&quot;apartmán na prodej jižní morava&quot;</code>, <code>&quot;apartmány na prodej jižní morava&quot;</code>, <code>&quot;koupě apartmánu jižní morava&quot;</code>, <code>&quot;koupit apartmán jižní morava&quot;</code>, <code>&quot;rekreační apartmán na prodej&quot;</code>, <code>&quot;apartmán v resortu na prodej&quot;</code>, <code>&quot;apartmánový resort na prodej&quot;</code>, <code>&quot;nový apartmán na prodej morava&quot;</code></li>
+<li><strong>A2 Apartmán s pronájmem:</strong> <code>[investiční apartmán]</code>, <code>&quot;investiční apartmán jižní morava&quot;</code>, <code>&quot;investiční apartmány na prodej&quot;</code>, <code>&quot;apartmán jako investice&quot;</code>, <code>&quot;koupit apartmán k pronájmu&quot;</code>, <code>&quot;apartmán se správou pronájmu&quot;</code>, <code>&quot;apartmán se správou&quot;</code>, <code>&quot;koupě apartmánu na pronájem&quot;</code></li>
+</ul></details><details class="txt"><summary><span class="pis">B</span>Od 500 000 Kč (crowdfunding myRENTIA)</summary><p class="pozor"><strong>KE SCHVÁLENÍ: Rentia / myRENTIA / advokátka. Bez písemného schválení se nenahrává.</strong></p>
+<p>Pro: 25–54, kdo nemá na celý apartmán · Zobrazovaná cesta: resortvinohrady.cz/investice/od-500-tisic</p>
+<h4>Responzivní reklama ve vyhledávání (RSA)</h4>
+<div class="tw"><table><thead><tr><th>#</th><th>Nadpis</th><th>Znaků</th><th>Připnout</th></tr></thead><tbody><tr><td>1</td><td>Investice od 500 000 Kč</td><td>23/30</td><td>pozice 1</td></tr><tr><td>2</td><td>Nemáte na celý apartmán?</td><td>24/30</td><td>pozice 1</td></tr><tr><td>3</td><td>Crowdfunding myRentia</td><td>21/30</td><td></td></tr><tr><td>4</td><td>Úrok 6 % ročně</td><td>14/30</td><td></td></tr><tr><td>5</td><td>Úrok vyplácený každý měsíc</td><td>26/30</td><td></td></tr><tr><td>6</td><td>Zajištěno zástavou apartmánu</td><td>28/30</td><td></td></tr><tr><td>7</td><td>Po 5 letech podíl na růstu</td><td>26/30</td><td></td></tr><tr><td>8</td><td>Resort Vinohrady Hlohovec</td><td>25/30</td><td></td></tr><tr><td>9</td><td>Resort u Lednice a Valtic</td><td>25/30</td><td></td></tr><tr><td>10</td><td>Nemovitost, kterou navštívíte</td><td>29/30</td><td></td></tr><tr><td>11</td><td>Penzion od 2008, nově resort</td><td>28/30</td><td></td></tr><tr><td>12</td><td>16 apartmánů, otevření 2027</td><td>27/30</td><td></td></tr><tr><td>13</td><td>Podklady k investici e-mailem</td><td>29/30</td><td></td></tr><tr><td>14</td><td>Získejte přednostní přístup</td><td>27/30</td><td></td></tr><tr><td>15</td><td>Od 500 000 Kč s úrokem 6 %</td><td>26/30</td><td></td></tr></tbody></table></div>
+<div class="tw"><table><thead><tr><th>#</th><th>Popis</th><th>Znaků</th></tr></thead><tbody><tr><td>1</td><td>Nemáte na celý apartmán? S myRentia vstoupíte do Resort Vinohrady už od 500 000 Kč.</td><td>83/90</td></tr><tr><td>2</td><td>Úrok 6 % ročně vyplácený každý měsíc, zástava na konkrétním apartmánu. Nese riziko.</td><td>83/90</td></tr><tr><td>3</td><td>16 apartmánů u Lednice a Valtic, otevření Q4 2027. Po 5 letech podíl na růstu hodnoty.</td><td>86/90</td></tr><tr><td>4</td><td>Získejte přednostní přístup. Podklady k investici a podmínky pošleme e-mailem.</td><td>78/90</td></tr></tbody></table></div>
+<h4>Performance Max (skupina podkladů)</h4>
+<p><strong>Krátké nadpisy</strong> (max 30)</p>
+<ul>
+<li>Investice od 500 000 Kč · 23/30</li>
+<li>Úrok 6 % ročně · 14/30</li>
+<li>Úrok vyplácený každý měsíc · 26/30</li>
+<li>Zajištěno zástavou apartmánu · 28/30</li>
+<li>Crowdfunding myRentia · 21/30</li>
+</ul>
+<p><strong>Dlouhé nadpisy</strong> (max 90)</p>
+<ul>
+<li>Nemáte na celý apartmán? S myRentia investujete do Resort Vinohrady od 500 000 Kč · 81/90</li>
+<li>Úrok 6 % ročně vyplácený každý měsíc a zástava na konkrétním apartmánu · 70/90</li>
+<li>Po 5 letech podíl na růstu hodnoty resortu u Lednice a Valtic · 61/90</li>
+</ul>
+<p><strong>Popisy</strong> (max 90, první do 60)</p>
+<ul>
+<li>Investice od 500 000 Kč, úrok 6 % ročně každý měsíc. · 52/60</li>
+<li>Investice nese riziko. Podklady a podmínky pošleme po registraci e-mailem. · 74/90</li>
+<li>Nemáte na celý apartmán? S myRentia vstoupíte do Resort Vinohrady už od 500 000 Kč. · 83/90</li>
+<li>16 apartmánů u Lednice a Valtic, otevření Q4 2027. Po 5 letech podíl na růstu hodnoty. · 86/90</li>
+</ul>
+<h4>Demand Gen (reklama s obrázkem / videem)</h4>
+<p><strong>Krátké nadpisy</strong> (max 40)</p>
+<ul>
+<li>Nemáte na celý apartmán? Od 500 000 Kč · 38/40</li>
+<li>Úrok 6 % ročně, výplata každý měsíc · 35/40</li>
+<li>Zajištěno zástavou na apartmánu · 31/40</li>
+<li>Crowdfunding myRentia u Lednice · 31/40</li>
+<li>Podklady k investici pošleme e-mailem · 37/40</li>
+</ul>
+<p><strong>Dlouhé nadpisy</strong> (max 90)</p>
+<ul>
+<li>Nemáte na celý apartmán? S myRentia investujete do Resort Vinohrady od 500 000 Kč · 81/90</li>
+<li>Úrok 6 % ročně vyplácený každý měsíc a zástava na konkrétním apartmánu · 70/90</li>
+</ul>
+<p><strong>Popisy</strong> (max 90)</p>
+<ul>
+<li>Nemáte na celý apartmán? S myRentia vstoupíte do Resort Vinohrady už od 500 000 Kč. · 83/90</li>
+<li>Investice nese riziko. Podklady a podmínky pošleme po registraci e-mailem. · 74/90</li>
+<li>16 apartmánů u Lednice a Valtic, otevření Q4 2027. Po 5 letech podíl na růstu hodnoty. · 86/90</li>
+<li>Úrok 6 % ročně vyplácený každý měsíc, zástava na konkrétním apartmánu. Nese riziko. · 83/90</li>
+</ul>
+<h4>Klíčová slova (návrh, ověřit objemy v Plánovači klíčových slov)</h4>
+<ul>
+<li><strong>B1 Crowdfunding nemovitostí:</strong> <code>&quot;crowdfunding nemovitosti&quot;</code>, <code>&quot;realitní crowdfunding&quot;</code>, <code>&quot;nemovitostní crowdfunding&quot;</code>, <code>&quot;crowdfunding do nemovitostí&quot;</code>, <code>&quot;investice do nemovitostí crowdfunding&quot;</code>, <code>[myrentia]</code>, <code>&quot;my rentia&quot;</code>, <code>&quot;rentia crowdfunding&quot;</code></li>
+<li><strong>B2 Investice zajištěná nemovitostí:</strong> <code>&quot;investice zajištěná nemovitostí&quot;</code>, <code>&quot;investice se zástavou nemovitosti&quot;</code>, <code>&quot;investice do nemovitostí od 500 000&quot;</code>, <code>&quot;investice do nemovitostí s měsíční výplatou&quot;</code>, <code>&quot;investice do resortu&quot;</code>, <code>&quot;investice do apartmánů&quot;</code>, <code>&quot;kam investovat 500 tisíc&quot;</code>, <code>&quot;investice 500 000 kč&quot;</code></li>
+</ul></details><details class="txt"><summary><span class="pis">C</span>Místo, které má všechno</summary><p>Pro: široké publikum, lokalita a služby · Zobrazovaná cesta: resortvinohrady.cz/resort/lednice-valtice</p>
+<h4>Responzivní reklama ve vyhledávání (RSA)</h4>
+<div class="tw"><table><thead><tr><th>#</th><th>Nadpis</th><th>Znaků</th><th>Připnout</th></tr></thead><tbody><tr><td>1</td><td>Valtice i Lednice 6 minut</td><td>25/30</td><td>pozice 1</td></tr><tr><td>2</td><td>Apartmán u Lednice a Valtic</td><td>27/30</td><td>pozice 1</td></tr><tr><td>3</td><td>Místo, které má všechno</td><td>23/30</td><td>pozice 2</td></tr><tr><td>4</td><td>Mikulov jen 18 minut</td><td>20/30</td><td></td></tr><tr><td>5</td><td>V Lednicko-valtickém areálu</td><td>27/30</td><td></td></tr><tr><td>6</td><td>Bazén, wellness a vinárna</td><td>25/30</td><td></td></tr><tr><td>7</td><td>Degustace v pátek a v sobotu</td><td>28/30</td><td></td></tr><tr><td>8</td><td>Půjčovna kol přímo v resortu</td><td>28/30</td><td></td></tr><tr><td>9</td><td>Z Brna 51 minut autem</td><td>21/30</td><td></td></tr><tr><td>10</td><td>Resort Vinohrady Hlohovec</td><td>25/30</td><td></td></tr><tr><td>11</td><td>Restaurace a sauna v areálu</td><td>27/30</td><td></td></tr><tr><td>12</td><td>Zahrada s dětským hřištěm</td><td>25/30</td><td></td></tr><tr><td>13</td><td>Apartmány od 2,8 mil. Kč</td><td>24/30</td><td></td></tr><tr><td>14</td><td>Získejte přednostní přístup</td><td>27/30</td><td></td></tr><tr><td>15</td><td>Kam se budete rádi vracet</td><td>25/30</td><td></td></tr></tbody></table></div>
+<div class="tw"><table><thead><tr><th>#</th><th>Popis</th><th>Znaků</th></tr></thead><tbody><tr><td>1</td><td>Valtice a Lednice 6 minut, Mikulov 18. Bazén, wellness, vinárna a kola přímo v resortu.</td><td>87/90</td></tr><tr><td>2</td><td>Vlastní apartmán na jižní Moravě. Když tam nejste, pronájem zajistí Rentia Places.</td><td>82/90</td></tr><tr><td>3</td><td>Vnitřní bazén, sauna, vířivka, restaurace a vinárna s degustacemi. Celý rok v areálu.</td><td>85/90</td></tr><tr><td>4</td><td>Neveřejný předprodej 16 apartmánů. Získejte přednostní přístup, kód pošleme e-mailem.</td><td>85/90</td></tr></tbody></table></div>
+<h4>Performance Max (skupina podkladů)</h4>
+<p><strong>Krátké nadpisy</strong> (max 30)</p>
+<ul>
+<li>Místo, které má všechno · 23/30</li>
+<li>Valtice i Lednice 6 minut · 25/30</li>
+<li>Bazén, wellness a vinárna · 25/30</li>
+<li>Mikulov jen 18 minut · 20/30</li>
+<li>Kam se budete rádi vracet · 25/30</li>
+<li>Resort u vinic · 14/30</li>
+</ul>
+<p><strong>Dlouhé nadpisy</strong> (max 90)</p>
+<ul>
+<li>Valtice i Lednice 6 minut, Mikulov 18. Apartmán v resortu s bazénem, wellness a vinárnou · 88/90</li>
+<li>Vlastní místo na jižní Moravě, kam se budete rádi vracet. 16 apartmánů v Hlohovci · 81/90</li>
+<li>Degustace každý pátek a sobotu, kola, bazén a sauna přímo v resortu · 67/90</li>
+</ul>
+<p><strong>Popisy</strong> (max 90, první do 60)</p>
+<ul>
+<li>Bazén, wellness, restaurace a vinárna. Celý rok. · 48/60</li>
+<li>Valtice a Lednice 6 minut, Mikulov 18. Bazén, wellness, vinárna a kola přímo v resortu. · 87/90</li>
+<li>Vlastní apartmán na jižní Moravě. Když tam nejste, pronájem zajistí Rentia Places. · 82/90</li>
+<li>Neveřejný předprodej 16 apartmánů. Získejte přednostní přístup, kód pošleme e-mailem. · 85/90</li>
+</ul>
+<h4>Demand Gen (reklama s obrázkem / videem)</h4>
+<p><strong>Krátké nadpisy</strong> (max 40)</p>
+<ul>
+<li>Místo, které má všechno · 23/40</li>
+<li>Valtice i Lednice 6 minut, Mikulov 18 · 37/40</li>
+<li>Bazén, wellness a vinárna v jednom · 34/40</li>
+<li>Vlastní apartmán na jižní Moravě · 32/40</li>
+<li>Degustace každý pátek a sobotu · 30/40</li>
+</ul>
+<p><strong>Dlouhé nadpisy</strong> (max 90)</p>
+<ul>
+<li>Valtice i Lednice 6 minut, Mikulov 18. Apartmán v resortu s bazénem, wellness a vinárnou · 88/90</li>
+<li>Vlastní místo na jižní Moravě, kam se budete rádi vracet. 16 apartmánů v Hlohovci · 81/90</li>
+</ul>
+<p><strong>Popisy</strong> (max 90)</p>
+<ul>
+<li>Valtice a Lednice 6 minut, Mikulov 18. Bazén, wellness, vinárna a kola přímo v resortu. · 87/90</li>
+<li>Vlastní apartmán na jižní Moravě. Když tam nejste, pronájem zajistí Rentia Places. · 82/90</li>
+<li>Vnitřní bazén, sauna, vířivka, restaurace a vinárna s degustacemi. Celý rok v areálu. · 85/90</li>
+<li>Neveřejný předprodej 16 apartmánů. Získejte přednostní přístup, kód pošleme e-mailem. · 85/90</li>
+</ul>
+<h4>Klíčová slova (návrh, ověřit objemy v Plánovači klíčových slov)</h4>
+<ul>
+<li><strong>C1 Lednice, Valtice, Mikulov:</strong> <code>&quot;apartmán lednice prodej&quot;</code>, <code>&quot;apartmán na prodej lednice&quot;</code>, <code>&quot;apartmán valtice prodej&quot;</code>, <code>&quot;apartmán na prodej valtice&quot;</code>, <code>&quot;apartmán mikulov prodej&quot;</code>, <code>&quot;apartmán na prodej mikulov&quot;</code>, <code>&quot;byt lednice prodej&quot;</code>, <code>&quot;byt valtice prodej&quot;</code>, <code>&quot;byt mikulov prodej&quot;</code>, <code>&quot;reality lednice&quot;</code>, <code>&quot;reality valtice&quot;</code>, <code>&quot;nemovitost lednice&quot;</code>, <code>&quot;apartmán pálava&quot;</code>, <code>&quot;apartmán lednicko valtický areál&quot;</code>, <code>[apartmán hlohovec]</code></li>
+<li><strong>C2 Víno, bazén, wellness:</strong> <code>&quot;apartmán s bazénem na prodej&quot;</code>, <code>&quot;apartmán s wellness na prodej&quot;</code>, <code>&quot;apartmán u vinic&quot;</code>, <code>&quot;apartmán ve vinařské oblasti&quot;</code>, <code>&quot;nemovitost u vinic&quot;</code>, <code>&quot;rekreační nemovitost jižní morava&quot;</code></li>
+</ul></details><details class="txt"><summary><span class="pis">Z</span>Značka (hledání názvu projektu)</summary><p>Pro: lidé, kteří už o projektu vědí · Zobrazovaná cesta: resortvinohrady.cz/resort/hlohovec</p>
+<h4>Responzivní reklama ve vyhledávání (RSA)</h4>
+<div class="tw"><table><thead><tr><th>#</th><th>Nadpis</th><th>Znaků</th><th>Připnout</th></tr></thead><tbody><tr><td>1</td><td>Resort Vinohrady Hlohovec</td><td>25/30</td><td>pozice 1</td></tr><tr><td>2</td><td>Oficiální web projektu</td><td>22/30</td><td></td></tr><tr><td>3</td><td>16 apartmánů u Lednice</td><td>22/30</td><td></td></tr><tr><td>4</td><td>Neveřejný předprodej</td><td>20/30</td><td></td></tr><tr><td>5</td><td>Získejte přednostní přístup</td><td>27/30</td><td></td></tr><tr><td>6</td><td>Cena od 2,8 mil. Kč vč. DPH</td><td>27/30</td><td></td></tr><tr><td>7</td><td>Bazén, wellness a vinárna</td><td>25/30</td><td></td></tr><tr><td>8</td><td>Valtice i Lednice 6 minut</td><td>25/30</td><td></td></tr><tr><td>9</td><td>Pronájem řeší Rentia Places</td><td>27/30</td><td></td></tr><tr><td>10</td><td>Přístupový kód e-mailem</td><td>23/30</td><td></td></tr><tr><td>11</td><td>Předání a otevření Q4 2027</td><td>26/30</td><td></td></tr><tr><td>12</td><td>Apartmány vybavené na klíč</td><td>26/30</td><td></td></tr><tr><td>13</td><td>Prodává Rentia Estate</td><td>21/30</td><td></td></tr><tr><td>14</td><td>Kontakt: Matěj Staněk</td><td>21/30</td><td></td></tr><tr><td>15</td><td>Užívejte apartmán kdykoli</td><td>25/30</td><td></td></tr></tbody></table></div>
+<div class="tw"><table><thead><tr><th>#</th><th>Popis</th><th>Znaků</th></tr></thead><tbody><tr><td>1</td><td>Oficiální web projektu Resort Vinohrady v Hlohovci. Prodej Rentia Estate.</td><td>73/90</td></tr><tr><td>2</td><td>16 apartmánů mezi Lednicí a Valticemi. Od 2,8 mil. Kč vč. DPH, vybavené na klíč.</td><td>80/90</td></tr><tr><td>3</td><td>Vnitřní bazén, sauna, vířivka, restaurace a vinárna s degustacemi. Celý rok v areálu.</td><td>85/90</td></tr><tr><td>4</td><td>Neveřejný předprodej. Získejte přednostní přístup, kód k nabídce pošleme e-mailem.</td><td>82/90</td></tr></tbody></table></div>
+<h4>Klíčová slova (návrh, ověřit objemy v Plánovači klíčových slov)</h4>
+<ul>
+<li><strong>Z1 Značka:</strong> <code>[resort vinohrady]</code>, <code>&quot;resort vinohrady&quot;</code>, <code>[resortvinohrady]</code>, <code>&quot;resort vinohrady hlohovec&quot;</code>, <code>&quot;rentia apartmány&quot;</code>, <code>&quot;rentia hlohovec&quot;</code>, <code>&quot;rentia places&quot;</code></li>
+</ul></details><details class="txt"><summary><span class="pis">+</span>Vylučující klíčová slova</summary><p>Sdílené seznamy (Nástroje → Sdílená knihovna → Seznamy vylučujících klíčových slov). Zapisují se jako volná shoda (vyloučí dotaz, který obsahuje všechna slova).</p>
+<ul>
+<li><strong>spolecne (všechny kampaně)</strong> (63): ubytování, ubytovani, pobyt, pobyty, dovolená, dovolena, víkend, last minute, sleva, slevomat, voucher, poukaz, booking, noclehy, nocleh, cena za noc, penzion, kemp, hotel lednice, hotel valtice, hotel mikulov, pronájem bytu, byt k pronájmu, podnájem, nájem bytu, pronájem chaty, práce, brigáda, zaměstnání, vstupné, otevírací doba, prohlídka zámku, počasí, mapa, cyklostezka, výlet, výlety, co navštívit, festival, vinobraní, svatba, oslava, teambuilding, pronájem sálu, degustace vína, vinařství, zdarma, levné, levně, dražba, exekuce, praha, vinohrady praha, praha 2, vinohradská, hlohovec slovensko, slovensko, nitra, trnava, garantovaný, garance, garantovaný pronájem, garantovaný výnos</li>
+<li><strong>jen A a C</strong> (9): recenze, lipno, krkonoše, šumava, špindlerův mlýn, harrachov, jeseníky, beskydy, hory</li>
+<li><strong>jen B</strong> (14): bez rizika, státní dluhopisy, spořicí účet, termínovaný vklad, akcie, etf, krypto, bitcoin, forex, půjčka, pujcka, úvěr, hypotéka, podvod</li>
+</ul>
+<p>Proč zrovna tyhle: „Vinohrady“ je i čtvrť v Praze (bez vyloučení „praha“, „vinohradská“ by se reklama ukazovala lidem, co hledají byt na pražských Vinohradech). „Hlohovec“ je i město na Slovensku. Dotazy s „ubytování, pobyt, víkend, penzion, hotel“ hledají dovolenou, ne koupi. „Garantovaný výnos/pronájem“ vylučuju, protože výnos se negarantuje.</p></details><details class="txt"><summary><span class="pis">+</span>Rozšíření (podklady) pro vyhledávání</summary><p><strong>Odkazy na web</strong> (text max 25, řádky max 35; cílové URL doplnit podle kotev na webu):</p>
+<div class="tw"><table><thead><tr><th>Text</th><th>Řádek 1</th><th>Řádek 2</th></tr></thead><tbody><tr><td>Přednostní přístup (18)</td><td>Kód k nabídce pošleme e-mailem (30)</td><td>Neveřejná nabídka 16 apartmánů (30)</td></tr><tr><td>Resort a služby (15)</td><td>Bazén, wellness a restaurace (28)</td><td>Vinárna s degustacemi pá a so (29)</td></tr><tr><td>Lokalita (8)</td><td>Valtice a Lednice 6 minut (25)</td><td>Mikulov 18 min, Brno 51 min (27)</td></tr><tr><td>Správa pronájmu (15)</td><td>Pronájem zajistí Rentia Places (30)</td><td>70 % čistých tržeb majitelům (28)</td></tr><tr><td>Harmonogram (11)</td><td>Zápis do katastru Q1 2027 (25)</td><td>Předání a otevření Q4 2027 (26)</td></tr><tr><td>Kontakt (7)</td><td>Matěj Staněk, obchod (20)</td><td>+420 734 244 919 (16)</td></tr></tbody></table></div>
+<p><strong>Popisky</strong> (max 25): Neveřejný předprodej (20) · Vybavení na klíč (16) · Vnitřní bazén (13) · Wellness se saunou (18) · Vinárna s degustacemi (21) · Půjčovna kol (12) · Konference pro 50 osob (22) · Zápis do katastru 2027 (22) · Otevření Q4 2027 (16) · Správa Rentia Places (20)</p>
+<p><strong>Strukturovaný úryvek „Vybavení“:</strong> Vnitřní bazén (13), Wellness (8), Restaurace (10), Vinárna (7), Konferenční sál (15), Půjčovna kol (12), Dětské hřiště (13)</p>
+<p><strong>Strukturovaný úryvek „Typy“:</strong> Studio pro 2 (12), Rodinné studio pro 4 (20), Rodinný apartmán pro 4 (22)</p>
+<p><strong>Volání:</strong> +420 734 244 919 (Matěj Staněk; zobrazovat jen v pracovní době, kterou potvrdí Staněk)</p>
+<p><strong>Obrázky do vyhledávání:</strong> čisté fotky bez textu z <code>bannery/ciste/</code> (1200×1200 a 1200×628), <strong>logo</strong> <code>bannery/logo/logo_1200x1200.png</code>, název firmy „Resort Vinohrady“.</p></details>
+</section>
+
+<section id="potrebujeme">
+<div class="potreba">
+<h2>Co od vás potřebujeme</h2>
+<p>Abychom mohli kampaň dokončit a spustit:</p>
+<ol>
+<li><div><b>Schválení videí, reklam a bannerů</b><span>Stačí odpověď „schvaluji“, nebo připomínky k jednotlivým videím a obrázkům.</span></div></li>
+<li><div><b>Přístup do Google Ads, Google Analytics 4 a Google Tag Manager</b><span>Kampaně poběží přes váš účet. Na webu vidíme značky GTM a Google Ads, potřebujeme vědět, ke kterému účtu patří.</span></div></li>
+<li><div><b>Rozpočet na reklamu</b><span>Denní rozpočet domluvíme spolu. Platí se přímo Googlu z vašeho účtu.</span></div></li>
+<li><div><b>Schválení varianty B (crowdfunding)</b><span>Texty o úroku 6 %, zástavě a podílu na růstu musí odsouhlasit Rentia / myRENTIA, ideálně i advokátka.</span></div></li>
+<li><div><b>Potvrzení ceny a časů dojezdu</b><span>Cenu „od 2,8 mil. Kč vč. DPH“ máme z webu (apartmán A.11). Časy dojezdu (Valtice a Lednice 6 min, Mikulov 18 min, Vídeň a Bratislava cca 1 h) taky z webu.</span></div></li>
+</ol>
+</div>
+</section>
+</main>
+<footer class="wrap">Připravilo FD Studio pro Resort Vinohrady a RENTIA · listopad 2026 · Vizualizace jsou ilustrační.</footer>
+<div id="lb"><img alt=""></div>
+<script>
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('a.lb').forEach(a=>a.addEventListener('click',ev=>{ev.preventDefault();li.src=a.href;lb.classList.add('on')}));
+lb.addEventListener('click',()=>{lb.classList.remove('on');li.removeAttribute('src')});
+document.addEventListener('keydown',ev=>{if(ev.key==='Escape')lb.click()});
+const io=new IntersectionObserver(es=>es.forEach(x=>{const v=x.target;
+ if(x.isIntersecting){if(!v.src)v.src=v.dataset.src;v.play().catch(()=>{})}else v.pause()}),{rootMargin:'120px'});
+document.querySelectorAll('.ai video').forEach(v=>io.observe(v));
+document.querySelectorAll('video[controls]').forEach(v=>v.addEventListener('play',()=>document.querySelectorAll('video[controls]').forEach(o=>{if(o!==v)o.pause()})));
+</script>
+</body>
+</html>

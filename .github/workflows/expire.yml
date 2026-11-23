@@ -1,0 +1,38 @@
+# Webová nabídka FrantišekDron: po 2027-03-31 smaže celý obsah repozitáře (nová historie bez nabídky),
+# nechá jen stránku „Platnost odkazu skončila“ a sám se vypne. Placeholder 2027-03-31 = YYYY-MM-DD.
+name: Konec platnosti nabídky
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  actions: write
+jobs:
+  expire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Smazat nabídku po termínu
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [[ "$(date -u +%F)" < "2027-03-31" ]]; then echo "Nabídka platí do 2027-03-31"; exit 0; fi
+          if grep -q "Platnost odkazu skončila" index.html 2>/dev/null; then echo "Už smazáno"; else
+          mkdir ../site && cp -r .github ../site/ && cd ../site
+          cat > index.html <<'HTML'
+          <!DOCTYPE html><html lang="cs"><head><meta charset="UTF-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FrantišekDron</title>
+          <style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0e1310;color:#ece9e1;font-family:Georgia,serif;text-align:center;padding:24px}p{font-family:Arial,sans-serif;color:#a7b0a3}</style></head>
+          <body><div><h1>Platnost odkazu skončila</h1><p>Aktuální nabídku pošleme rádi znovu: honza@frantisekdron.cz · +420 723 707 958</p></div></body></html>
+          HTML
+          printf 'User-agent: *\nDisallow: /\n' > robots.txt
+          touch .nojekyll
+          git init -q -b main
+          git -c user.name="FrantišekDron" -c user.email="honza@frantisekdron.cz" add -A
+          git -c user.name="FrantišekDron" -c user.email="honza@frantisekdron.cz" commit -qm "Platnost nabídky skončila"
+          git push -f "https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git" main
+          curl -s -X POST -H "Authorization: Bearer ${GH_TOKEN}" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/${REPO}/pages/builds" || true
+          fi
+          curl -s -X PUT -H "Authorization: Bearer ${GH_TOKEN}" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/${REPO}/actions/workflows/expire.yml/disable" || true
